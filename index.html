@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สิ่งที่อยากจะบอกเธอ</title>
+
+<style>
+body {
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top, #ff9a9e, #fad0c4, #fbc2eb);
+  font-family: 'Segoe UI', sans-serif;
+  overflow:hidden;
+}
+
+/* ซอง */
+.envelope {
+  width:340px;
+  height:230px;
+  background:white;
+  border-radius:15px;
+  position:relative;
+  cursor:pointer;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+
+.envelope:hover {
+  transform:scale(1.05);
+}
+
+/* ฝาซอง */
+.flap {
+  width:0;
+  height:0;
+  border-left:170px solid transparent;
+  border-right:170px solid transparent;
+  border-bottom:120px solid #ff4d6d;
+  position:absolute;
+  top:-120px;
+  transition:1s;
+  transform-origin:bottom;
+}
+
+/* กระดาษ */
+.letter {
+  position:absolute;
+  width:300px;
+  height:190px;
+  background:#fff0f5;
+  top:20px;
+  left:20px;
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+  transform:translateY(170px);
+  transition:1s;
+  opacity:0;
+  overflow:auto;
+}
+
+.envelope.open .flap {
+  transform:rotateX(180deg);
+}
+
+.envelope.open .letter {
+  transform:translateY(-40px);
+  opacity:1;
+}
+
+h1 {
+  color:#ff4d6d;
+  font-size:20px;
+}
+
+p {
+  font-size:14px;
+  color:#333;
+}
+
+/* กล่องตอบ */
+.reply-box {
+  margin-top:10px;
+}
+
+.reply-box textarea {
+  width:95%;
+  border-radius:8px;
+  border:none;
+  padding:8px;
+  resize:none;
+}
+
+.reply-box button {
+  margin-top:8px;
+  padding:6px 15px;
+  border:none;
+  border-radius:20px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+
+.reply-box button:hover {
+  background:#e63956;
+}
+
+/* หัวใจ */
+.heart {
+  position:absolute;
+  font-size:20px;
+  animation:floatUp 3s linear forwards;
+}
+
+@keyframes floatUp {
+  0% {transform:translateY(0); opacity:1;}
+  100% {transform:translateY(-200px); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="flap"></div>
+
+  <div class="letter">
+    <h1>สิ่งที่อยากจะบอกเธอ</h1>
+    <p>
+      คือจริงๆเรารู้สึกกับเองมาตั้งนานแล้วแต่มันไม่ใช่แนวแบบที่รักแบบเชิงอันนั้นน่ะเองเข้าใจไหมคือเรารับแบบมันจะมีตอนนึงที่ บังพี ไปบอกว่าเราชอบเองแต่ว่าก็ถามว่าชอบจริงๆไหมก็ชอบจริงๆนะเอ็งดูแบบดูมึนๆน่ารักๆดีแต่คงไม่ใช่แบบชอบแนวๆนั้นที่เองแบบคิดไปอ่ะเราเลยปฏิเสธไปวันนั้นเพราะว่ามันคือเรื่องจริงเราไม่ได้ชอบเองแนวๆนั้นแต่ว่าเราชอบแบบอธิบายไม่ถูกอ่ะเป็นเพื่อนไหมก็มันก็คือเพื่อนที่แบบเพื่อนรักอะไรอย่างเงี้ยแต่เราอาจจะไม่สนิทเองอะไรขนาดนั้นไงเห็นเองน่ารักดีอะไรอย่างเงี้ยก็เอ็นดูแต่เราวันสุดท้ายเราก็กะให้เองแบบจัดเต็มเลยแล้วก็บอกเองจริงๆว่าเรารู้สึกยังไงนะ แต่ยอมรับว่าเราชอบเองจริงๆนะแต่ด้วยความที่เองเป็นเด็กเรียนแล้วมีหน้าที่กันงานที่แบบต้องทำเราก็เข้าใจนะ นั่นแหละไม่มีอะไรหรอกแค่อยากจะมาบอกว่าชอบมันดูไม่ใช่เชิงแบบนั้นน่ะแค่แบบรู้สึกว่าแบบเป็นเพื่อนสนิทอะไรเงี้ยบางทีก็อยากมีฟิวส์น่าอ่านหนังสือด้วยกันอะไรอย่างนี้นะแล้วก็คุยเล่นกันชิวๆอย่างนี้เออดูเป็นฟิวที่ดีมากแต่สุดท้ายก็เรากระจอกเกินสอบเข้าไม่ได้นั่นแหละเราชอบแค่ฟิวนั้นเลยแค่แบบอย่าอ่านหนังสือด้วยกันอะไรแค่เนี้ยเป็นความรู้สึกที่เราบอกไม่ถูกเหมือนกันนะแต่ถ้าถามว่าชอบไหมก็ต้องบอกเลยว่าชอบแต่คงไม่ใช่แนวนั้นแค่ชอบฟิวส์แบบอ่าอ่านหนังสือด้วยกันคุยกันอะไรประมาณนี้ชิวๆไม่เครียดแบบคุยกันคลายเครียดอะไรอย่างเงี้ยก็ช่วยได้นะก็สุดท้ายนี้อยากจะบอกว่าขออวยพรให้เองติดมหาวิทยาลัยแล้วแต่คิดว่าเอ็งน่าจะติดแหละล็อคอยู่แล้วเพราะเองเก่งอยู่แล้วเอ็งเข้าใจใช่ไหมฟิวส์ที่แบบที่เราอยู่กับเองอ่ะเพราะตอนม. ต้นที่ได้อ่านหนังสือทำอะไรมันก็ดูสนุกนะมันดูชิวๆแล้วเราได้ประโยชน์ด้วยได้เนื้อหาเก็บเนื้อหาอะไรเงี้ยเออชอบๆรู้สึกตอนมต้นอะไรอย่างนี้แต่มอปลายไม่ได้มีแล้วก็เลยรู้สึกคิดถึงหน่อยก็นี่คงจะเป็นห่วงข้อที่ทำให้เราชอบเองมั้งน่ารักดีนะ  แล้วเราคิดว่าน่าจะเป็นรักแบบฟิวเพื่อนมากกว่าไม่ใช่รักแบบเชิงนั้นที่เอ็งเข้าใจอะนะสนุกดีที่เราได้อยู่ด้วยกันแล้วเจอกันใหม่นะจ๊ะหวังว่าสักวันเราจะได้กลับมั้งอ่านหนังสือกันเองเหมือนกัน แค่อยากบอกว่ารู้สึกยังไงให้เฉยๆเอ็งอ่านแล้วเอ็งจะดูมึนๆหน่อยนะเพราะเราพิมพ์ไม่ค่อยรู้เรื่อง 
+    </p>
+
+    <div class="reply-box">
+      <h3>อยากจะบอกอะไรถึงผม</h3>
+      <textarea rows="3" placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
+      <br>
+      <button>ส่งคำตอบ</button>
+    </div>
+  </div>
+</div>
+
+<audio id="music" src="music.mp3"></audio>
+
+<script>
+const envelope = document.getElementById("envelope");
+const music = document.getElementById("music");
+
+envelope.addEventListener("click", function(e) {
+
+  // ถ้าคลิกในกระดาษหรือ textarea จะไม่ปิด
+  if (e.target.closest(".letter")) return;
+
+  if (envelope.classList.contains("open")) {
+    envelope.classList.remove("open");
+    music.pause();
+    music.currentTime = 0;
+  } else {
+    envelope.classList.add("open");
+    fadeInMusic();
+    createHearts();
+  }
+});
+
+function fadeInMusic() {
+  music.volume = 0;
+  music.play();
+  let vol = 0;
+  let fade = setInterval(() => {
+    if (vol < 1) {
+      vol += 0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fade);
+    }
+  }, 200);
+}
+
+function createHearts() {
+  for (let i = 0; i < 12; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = "60%";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 3000);
+  }
+}
+</script>
+
+</body>
+</html>
